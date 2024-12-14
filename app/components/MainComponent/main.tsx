@@ -1,4 +1,3 @@
-// new branch
 "use client";
 import { useState } from "react";
 import Button from "./button";
@@ -12,6 +11,7 @@ interface InputProps {
 const Main: React.FC<InputProps> = () => {
   const [inputValue, setInputValue] = useState<string>("");
   const [value, setValue] = useState<any>([]);
+
   console.log("inputValue", inputValue);
   console.log("value", value);
   const handleClick = () => {
@@ -32,10 +32,17 @@ const Main: React.FC<InputProps> = () => {
               onChange={(e: any) => setInputValue(e.target.value)}
               inputValue={inputValue}
             />
-            <Button
-              onClick={handleClick}
-              className=" items-center justify-center bg-blue-500 text-white px-2 py-2"
-            />
+
+            {inputValue ? (
+              <Button
+                onClick={handleClick}
+                className=" items-center justify-center bg-blue-500 text-white px-2 py-2"
+              />
+            ) : (
+              <button className=" items-center justify-center bg-blue-500 text-white px-2 py-2 cursor-not-allowed">
+                add
+              </button>
+            )}
           </div>
         </div>
         <div className=" flex items-center justify-center">
