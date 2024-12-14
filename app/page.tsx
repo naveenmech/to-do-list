@@ -1,8 +1,8 @@
-import Header from "../app/components/headerComponent/header";
+import Navbar from "./components/NavbarComponent/navbar";
 export default function Home() {
   return (
     <>
-      <Header />
+      <Navbar />
     </>
   );
 }
