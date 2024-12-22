@@ -1,9 +1,10 @@
 interface InputProps {
   className?: string;
   placeholder?: string;
-  value: string;
-  onChange: any;
-  inputValue: string;
+  value?: string;
+  onChange?: any;
+  inputValue?: string;
+  onKeyDown?: any;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -11,6 +12,7 @@ const Input: React.FC<InputProps> = ({
   placeholder,
   onChange,
   inputValue,
+  onKeyDown,
 }) => {
   return (
     <>
@@ -19,6 +21,7 @@ const Input: React.FC<InputProps> = ({
         placeholder={placeholder}
         value={inputValue}
         onChange={onChange}
+        onKeyDown={onKeyDown}
       />
     </>
   );
