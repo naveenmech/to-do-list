@@ -120,7 +120,7 @@ const Main: React.FC<InputProps> = () => {
                 </td>
                 <td className="truncate px-5">{item}</td>
                 <td>
-                  <button onClick={() => deletePerson(index)}>delete</button>{" "}
+                  <button onClick={() => deletePerson(index)}>delete</button>
                   {/* Delete specific item */}
                 </td>
               </tr>
